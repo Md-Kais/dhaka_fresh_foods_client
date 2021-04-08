@@ -1,0 +1,12 @@
+.card--image{
+    width: 100vh;
+    height: 100px;
+}
+.card-Bg-Change{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    border-radius: 20px;
+}
+.linkDesign{
+    text-decoration: none;
+    font-weight: 700px ;
+}

@@ -1,0 +1,14 @@
+.manage-cart{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    height: auto;
+    margin:2px;
+    border-radius: 20px;
+}
+.gapBetweenH4{
+    display: inline-block;
+    justify-content: space-around;
+    word-wrap: break-word;
+    font-size: auto;
+}

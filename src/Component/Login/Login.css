@@ -1,0 +1,10 @@
+.pageDisplay{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+input , button {
+    border-radius: 20px;
+    margin: 5px;
+    
+}

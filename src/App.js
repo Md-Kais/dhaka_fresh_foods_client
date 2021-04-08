@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+
 import './App.css';
+import AppSidebar from './Component/AppSidebar.js'
+import ManageProduct from './Component/ManageProduct/ManageProduct';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+
+} from "react-router-dom";
+import AddProduct from './Component/AddProduct/AddProduct';
+import Home from './Component/Home/Home';
+import Orders from './Component/Orders/Orders.js';
+import NavAppBar from './Component/NavAppBar/NavAppBar';
+import Login from './Component/Login/Login';
+import { createContext, useState } from 'react';
+import Admin from './Component/Admin/Admin';
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
+      <Router>
+        <Route exact path="/">
+          <NavAppBar />
+          <Home></Home>
+        </Route>
+          <Route exact path="/orders">
+            <NavAppBar />
+            <Orders></Orders>
+          </Route>
+        <Route exact path="/login">
+          <NavAppBar />
+          <Login></Login>
+        </Route>
+        <Switch>
+          <Route  path="/admin">
+            <AppSidebar></AppSidebar>
+            <Admin></Admin>
+          </Route>
+          <Route exact path="/addProducts">
+            <AppSidebar></AppSidebar>
+            <AddProduct></AddProduct>
+          </Route>
+
+        </Switch>
+      </Router>
+    </UserContext.Provider>
+</>
   );
 }
 

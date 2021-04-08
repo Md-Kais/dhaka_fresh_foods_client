@@ -1,0 +1,20 @@
+.desktopAppBar{
+    
+    display: inline-flex;
+    padding: 25px;
+    justify-content: space-around;
+}
+.linkDiv:hover{
+  background-color:bisque;
+  
+  border-radius: 25px;
+ 
+}
+.link-text{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size:18px;
+}
