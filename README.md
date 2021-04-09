@@ -1,71 +1,62 @@
-# Getting Started with Create React App
+This is a website for Dhaka Fresh Food Lovers. Here you can find Best foods , You can Order them and buy them. Our system will remember your previous card .
+ Here I implement : 1. Private route 
+ 
+                    2. Heroku hosting server 
+                    
+                    3. mongo db
+                    
+                    4. Firebase Hosting
+                    
+                    5. Secure JWT Token email verification
+                    
+                    6. Manage card See the admin panels previous added foods
+                    
+                    7. Add product add the food items.
+                   
+                    8. Order Cart can show your orders
+here are some screenshot about our website:
+Home page:
+![dhakaFreshFoods1](https://user-images.githubusercontent.com/62563474/114219058-04cdcf00-998c-11eb-9d5b-b12f582bf9bd.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Admin Manage Product page:
+![dhakafreshfoods2](https://user-images.githubusercontent.com/62563474/114219276-43fc2000-998c-11eb-91b7-3b4c18d7d61c.jpg)
 
-## Available Scripts
+Add product page:
+![dhakaFreshFoods3](https://user-images.githubusercontent.com/62563474/114219464-81f94400-998c-11eb-940c-3b164c558da0.jpg)
 
-In the project directory, you can run:
+Login Page:
+![dhakaFreshFoods%](https://user-images.githubusercontent.com/62563474/114219627-bb31b400-998c-11eb-8b06-42ee57d5ac53.jpg)
 
-### `npm start`
+Order Page:
+![dhakaFreshFoods4](https://user-images.githubusercontent.com/62563474/114219478-845b9e00-998c-11eb-8f84-804358100835.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+IN PHONE:
+Home Page:
+![phoneDhakafreshfoods1](https://user-images.githubusercontent.com/62563474/114220354-b4577100-998d-11eb-8deb-d7e08957a39b.jpg)
 
-### `npm test`
+With navbar home:
+![2](https://user-images.githubusercontent.com/62563474/114220356-b5889e00-998d-11eb-957a-f65615335407.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Manage Product:
+![manage](https://user-images.githubusercontent.com/62563474/114220650-14e6ae00-998e-11eb-8358-1caa5d4f169d.jpg)
 
-### `npm run build`
+Order:
+![3](https://user-images.githubusercontent.com/62563474/114220359-b7526180-998d-11eb-9ea4-cf04fe3aea43.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add Product:
+![addPr](https://user-images.githubusercontent.com/62563474/114220657-17e19e80-998e-11eb-83b6-f2d9da1de2cb.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add Product with sidebar:
+![addme](https://user-images.githubusercontent.com/62563474/114220668-19ab6200-998e-11eb-9b37-e3d93211fcd3.jpg)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+Site Link:
+https://dhakafreshfoods.web.app/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# full-stack-client-Md-Kais
+this site maybe broken due to network problem sometimes.
