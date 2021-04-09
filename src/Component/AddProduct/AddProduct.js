@@ -8,7 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 import { UserContext } from '../../App';
-
+import './AddProduct.css'
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',

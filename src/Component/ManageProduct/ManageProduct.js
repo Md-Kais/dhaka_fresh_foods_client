@@ -26,10 +26,11 @@ const ManageProduct = () => {
 
         <div className="margin" id="productList">
             <div className="manage-cart">
-                <h4 className="gapBetweenH4" >Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                <h4 className="gapBetweenH4">Quantity</h4>
+                <h4 className="gapBetweenH4" >Name  &nbsp;&nbsp;&nbsp;</h4>
+                <h4 className="gapBetweenH4">  &nbsp;&nbsp;&nbsp; Quantity &nbsp;&nbsp;&nbsp;&nbsp;</h4>
                 <h4 className="gapBetweenH4">Weight</h4>
-                <h4 className="price">Price</h4>
+                <h4 className="gapBetweenH4">Price</h4>
+                <h4 className="gapBetweenH4">Delete?</h4>
             </div>
             {
                 productsAdmin &&  productsAdmin.map((product,index)=>{

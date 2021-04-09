@@ -15,6 +15,7 @@ import NavAppBar from './Component/NavAppBar/NavAppBar';
 import Login from './Component/Login/Login';
 import { createContext, useState } from 'react';
 import Admin from './Component/Admin/Admin';
+import Deals from './Component/Deals/Deals';
 export const UserContext = createContext();
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
           <Route exact path="/orders">
             <NavAppBar />
             <Orders></Orders>
+          </Route>
+          <Route exact path="/deals">
+            <NavAppBar />
+            <Deals></Deals>
           </Route>
         <Route exact path="/login">
           <NavAppBar />

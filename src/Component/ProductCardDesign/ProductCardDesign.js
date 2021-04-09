@@ -35,7 +35,8 @@ const ProductCardDesign = ({datam})=>{
     function handleBuyCart(id){
         console.log(id);
         let count = localStorage.length+1;
-        localStorage.setItem(count,id);
+        const stringId=`ObjectId("${id}")`;
+        localStorage.setItem(count,name);
         localStorage.getItem(count);
         console.log(localStorage.length);
     }
@@ -73,7 +74,7 @@ const ProductCardDesign = ({datam})=>{
                 </CardContent>
 
                 {/* <Link to={`/leagueDetailed/${idLeague}`} className="linkDesign"></Link> */}
-                    <Button size="small" variant="contained" color="secondary" onClick={()=>{handleBuyCart(_id)}} style={{ margin: '5px' }}>Buy Now</Button>
+                    <Button size="small" variant="contained" color="secondary" onClick={()=>{handleBuyCart(name)}} style={{ margin: '5px' }}>Buy Now</Button>
                 
 
 

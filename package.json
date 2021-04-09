@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "eslint-plugin-react-hooks": "0.0.0-1214b302e",
     "firebase": "^8.3.2",
     "firebase-admin": "^9.6.0",
     "react": "^17.0.2",
