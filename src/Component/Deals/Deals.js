@@ -8,6 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { Button } from '@material-ui/core';
 import './Deals.css'
 import { UserContext } from '../../App';
+import { useHistory } from 'react-router';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,17 +28,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Deals({productKeys}) {
-    console.log(productKeys);
+    const history = useHistory()
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const classes = useStyles;
     const [values, setValues] = React.useState({
-        name: '',
+       
         email: `${loggedInUser.email}`,
-        address: '',
+        // address: '',
         prevproductKeys:productKeys,
-        phoneNumber: ''
+        // phoneNumber: ''
     });
-
+    console.log(productKeys);
 
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
@@ -46,17 +47,20 @@ export default function Deals({productKeys}) {
     const handleClick = () => {
         console.log(values);
         fetch('https://fathomless-caverns-29492.herokuapp.com/addOrder', {
-            method: 'POST', // or 'PUT'
+            method: 'POST', 
             headers: {
                 'content-type': 'application/json',
             },
             body: JSON.stringify(values),
+
         })
             .then(response => response.json())
             .then(data => {
                 localStorage.clear();
-                sessionStorage.clear();
+                sessionStorage.removeItem('price');
+               
                 console.log('Success:', data);
+                history.push('/shipment');
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -80,9 +84,9 @@ export default function Deals({productKeys}) {
                             'aria-label': 'email',
                         }}
                     />
-                    <FormHelperText id="standard-name-helper-text">Name</FormHelperText>
+                    <FormHelperText id="standard-email-helper-text">Email</FormHelperText>
                 </FormControl>
-                <br />
+                {/* <br />
                 <FormControl className={clsx(classes.margin, classes.withoutLabel, classes.textField)}>
                     <Input
                         id="standard-adornment-address"
@@ -116,7 +120,7 @@ export default function Deals({productKeys}) {
                     />
                     <FormHelperText id="standard-phoneNumber-helper-text">Phone Number</FormHelperText>
                 </FormControl>
-
+ */}
 
 
 

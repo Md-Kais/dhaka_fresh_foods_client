@@ -1,11 +1,11 @@
 
 import React, { useContext, useEffect, useState } from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import {  makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
+
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -76,7 +76,7 @@ export default function PrimarySearchAppBar() {
     const classesAvatar = useStylesAvatar();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser, productKeys] = useContext(UserContext);
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
     const { email, photoURL, displayName } = loggedInUser;
@@ -158,8 +158,8 @@ export default function PrimarySearchAppBar() {
                 </Badge></p></Link>
             </MenuItem>
             <MenuItem>
-                <Link to='/deals' className="link-text"><p style={{ width: '200px' }}><Badge color="secondary">
-                    Deals
+                <Link to='/shipment' className="link-text"><p style={{ width: '200px' }}><Badge color="secondary">
+                   Shipment
                 </Badge></p></Link>
             </MenuItem>
             <MenuItem>
@@ -218,7 +218,7 @@ export default function PrimarySearchAppBar() {
                         <div className="desktopAppBar linkDiv">
 
                             <Badge color="secondary">
-                                <Link to='/deals' className="link-text">Deals</Link>
+                                <Link to='/shipment' className="link-text">Shipment</Link>
                             </Badge>
                         </div>
                        

@@ -1,11 +1,12 @@
 
 import './App.css';
 import AppSidebar from './Component/AppSidebar.js'
-import ManageProduct from './Component/ManageProduct/ManageProduct';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+
 
 } from "react-router-dom";
 import AddProduct from './Component/AddProduct/AddProduct';
@@ -15,46 +16,54 @@ import NavAppBar from './Component/NavAppBar/NavAppBar';
 import Login from './Component/Login/Login';
 import { createContext, useState } from 'react';
 import Admin from './Component/Admin/Admin';
-import Deals from './Component/Deals/Deals';
+
+import Shipment from './Component/Shipment/Shipment';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+
+
+ 
   return (
 
     <>
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
-      <Router>
-        <Route exact path="/">
-          <NavAppBar />
-          <Home></Home>
-        </Route>
-          <Route exact path="/orders">
+        <Router>
+        
+          <Route exact path="/">
             <NavAppBar />
-            <Orders></Orders>
+            <Home></Home>
           </Route>
-          <Route exact path="/deals">
-            <NavAppBar />
-            <Deals></Deals>
-          </Route>
-        <Route exact path="/login">
-          <NavAppBar />
-          <Login></Login>
-        </Route>
-        <Switch>
-          <Route  path="/admin">
-            <AppSidebar></AppSidebar>
-            <Admin></Admin>
-          </Route>
-          <Route exact path="/addProducts">
-            <AppSidebar></AppSidebar>
-            <AddProduct></AddProduct>
-          </Route>
+          <Switch>
+            <PrivateRoute  path="/orders">
+              <NavAppBar />
+              <Orders></Orders>
+            </PrivateRoute>
+            <PrivateRoute  path="/shipment">
+              <NavAppBar />
+              <Shipment></Shipment>
+            </PrivateRoute>
+            <Route path="/login">
+              <NavAppBar />
+              <Login></Login>
+            </Route>
 
-        </Switch>
-      </Router>
-    </UserContext.Provider>
-</>
+
+            <PrivateRoute path="/admin">
+              <AppSidebar></AppSidebar>
+              <Admin></Admin>
+            </PrivateRoute>
+            <PrivateRoute path="/addProducts">
+              <AppSidebar></AppSidebar>
+              <AddProduct></AddProduct>
+            </PrivateRoute>
+
+          </Switch>
+        </Router>
+      </UserContext.Provider>
+    </>
   );
 }
 

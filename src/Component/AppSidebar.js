@@ -17,7 +17,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { SIdeBarData } from './SideBarData/SIdeBarData';
-import { Title } from '@material-ui/icons';
+import { AndroidSharp, Title } from '@material-ui/icons';
 import ManageProduct from './ManageProduct/ManageProduct';
 import {
     BrowserRouter as Router,
@@ -67,18 +67,22 @@ function ResponsiveDrawer(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-
+    let ans;
     const drawer = (
         <div>
             <div className={classes.toolbar} />
 
             {
                 SIdeBarData.map((item, key) => {
+                    
+                   
+                    
                     return (
                         <ListItem>
-                            <Link to={item.link}>
+                            <Link to={item.link} className="link-text">
                                 {item.icon} <span>{item.title}</span>
                             </Link>
+                       
                         </ListItem>
                     )
 
@@ -142,7 +146,7 @@ function ResponsiveDrawer(props) {
             </nav>
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-
+               
             </main>
         </div>
     );

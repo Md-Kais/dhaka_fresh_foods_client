@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import AllProductCard from '../AllProductCard/AllProductCard';
-
+import { Button, CircularProgress } from '@material-ui/core';
+import './Home.css'
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -27,11 +29,17 @@ const Home = () => {
     return (
         <div className={classes.root} >
             <Grid container spacing={3}>
-
-
-                <AllProductCard data={data}></AllProductCard>
+                {
+                    data.length <= 0 ? <div className="loadingHome"><CircularProgress /> </div>: <AllProductCard data={data}></AllProductCard>
+                }
+                
+                {/* <AllProductCard data={data}></AllProductCard> */}
 
             </Grid>
+            <div style={{display:'flex', justifyContent:'center'}}>
+                <button ><Link to="/orders" className="link-text">Go to the order</Link></button>
+            </div>
+           
 
         </div>
     );

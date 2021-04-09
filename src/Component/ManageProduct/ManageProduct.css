@@ -3,3 +3,8 @@
     border-radius: 10px;
     background-color: bisque;
 }
+.loadingHome{
+    height: 100vh;
+    margin:100px auto;
+    color:blue;
+}

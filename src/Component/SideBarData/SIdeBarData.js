@@ -1,7 +1,7 @@
 import React from 'react';
 import AppsIcon from '@material-ui/icons/Apps';
 import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
+
 import  Home  from '@material-ui/icons/Home';
 export const SIdeBarData = [
 
@@ -15,11 +15,7 @@ export const SIdeBarData = [
         icon: <AddIcon />,
         link: '/addProducts'
     },
-    {
-        title: 'Edit Product',
-        icon: <EditIcon />,
-        link: '/editProducts'
-    },
+    
     {
         title: 'Home',
         icon: <Home/>,
